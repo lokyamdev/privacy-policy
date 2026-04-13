@@ -109,7 +109,7 @@
         <section class="card">
             <p class="eyebrow">Privacy Policy</p>
             <h1>Calorie Calculator</h1>
-            <p class="updated">Last updated: April 4, 2026</p>
+            <p class="updated">Last updated: April 13, 2026</p>
 
             <p>
                 This Privacy Policy describes how Calorie Calculator ("we", "our", or "us")
@@ -121,6 +121,27 @@
                 <strong>Body weight data.</strong> The app allows you to enter and manage body
                 weight information. These records are stored locally on your device. We do not
                 store body weight records on our servers.
+            </p>
+            <p>
+                <strong>Account information.</strong> If you choose to sign in, we collect your
+                Google account email address and a unique user identifier provided by Google.
+                This information is stored securely on our backend (Supabase) and is used to
+                authenticate you, link your subscription, and enable account-dependent features
+                such as the AI Coach.
+            </p>
+            <p>
+                <strong>Subscription and entitlement data.</strong> If you purchase a subscription
+                through Google Play, we receive a subscription token and related metadata from
+                Google (product ID, purchase token, subscription status) to verify and manage
+                your entitlements. Payment processing is handled entirely by Google Play; we do
+                not receive or store your payment card details.
+            </p>
+            <p>
+                <strong>AI Coach messages.</strong> If you use the AI Coach feature, the messages
+                you send are transmitted to our backend and processed by OpenAI to generate a
+                response. Your conversation history is stored locally on your device. We do not
+                permanently retain your AI Coach messages on our servers beyond what is required
+                to generate each response.
             </p>
             <p>
                 <strong>Health Connect data.</strong> If you choose to enable Health Connect
@@ -137,41 +158,51 @@
                 and diagnostic information to detect, analyze, and fix technical issues.
             </p>
             <p>
-                <strong>Advertising data.</strong> We use Google AdMob to display advertisements.
-                AdMob may collect device identifiers and related information to provide
-                personalized or non-personalized ads, subject to applicable settings and consent
-                requirements.
+                <strong>Advertising data.</strong> We use Google AdMob to display advertisements
+                to users on free plans. AdMob may collect device identifiers and related information
+                to provide personalized or non-personalized ads, subject to applicable settings and
+                consent requirements. Subscribers on paid plans do not see ads.
             </p>
 
             <h2>2. How We Use Information</h2>
             <ul>
                 <li>Provide calorie, profile, and weight-tracking features.</li>
+                <li>Authenticate your account and manage your subscription entitlements.</li>
+                <li>Power the AI Coach by sending your messages and weight context to OpenAI.</li>
                 <li>Improve app stability, performance, and usability.</li>
                 <li>Monitor crashes and diagnose errors.</li>
-                <li>Display ads within the app.</li>
+                <li>Display ads to users on free plans.</li>
             </ul>
 
             <h2>3. Data Sharing</h2>
             <p>
                 We do not sell personal information. Some information may be processed by
-                third-party service providers that support app functionality, including Google
-                Firebase Analytics, Firebase Crashlytics, and Google AdMob.
+                third-party service providers that support app functionality:
             </p>
+            <ul>
+                <li><strong>Supabase</strong> — backend authentication and entitlement storage.</li>
+                <li><strong>OpenAI</strong> — processes AI Coach messages to generate responses. Messages you send to the AI Coach are subject to <a href="https://openai.com/policies/privacy-policy">OpenAI&apos;s Privacy Policy</a>.</li>
+                <li><strong>Google Play Billing</strong> — handles subscription purchases and provides subscription status to our backend.</li>
+                <li><strong>Google Firebase Analytics &amp; Crashlytics</strong> — usage analytics and crash reporting.</li>
+                <li><strong>Google AdMob</strong> — advertisement delivery for free-plan users.</li>
+            </ul>
             <p>
                 If you enable Health Connect integration, the app accesses body weight data from
-                Health Connect only with your permission.
+                Health Connect only with your explicit permission.
             </p>
             <p>
                 These third-party services operate under their own privacy policies. You can review
-                Google&apos;s Privacy Policy here:
+                Google&apos;s Privacy Policy at
                 <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>
+                and Supabase&apos;s Privacy Policy at
+                <a href="https://supabase.com/privacy">https://supabase.com/privacy</a>.
             </p>
 
             <h2>4. Data Retention and Deletion</h2>
             <p>
                 <strong>Locally stored app data.</strong> Body weight records, profile settings,
-                app preferences, and locally imported Health Connect copies remain on your device
-                until you delete them.
+                app preferences, AI Coach conversation history, and locally imported Health Connect
+                copies remain on your device until you delete them.
             </p>
             <div class="note">
                 You can delete all locally stored app data at any time from within the app by
@@ -180,8 +211,13 @@
                 settings or by uninstalling the app.
             </div>
             <p>
-                Because we do not store this local data on our own servers, we cannot delete it
-                remotely for you.
+                Because we do not store your body weight or AI Coach conversation history on our
+                own servers, we cannot delete that data remotely for you.
+            </p>
+            <p>
+                <strong>Account data.</strong> If you sign in, your account information (email and
+                user ID) is stored on our backend. You may request deletion of your account and
+                associated data by contacting us at the email address listed below.
             </p>
             <p>
                 <strong>Health Connect data.</strong> If you granted access to Health Connect, you
@@ -192,18 +228,22 @@
             <p>
                 <strong>Third-party service data.</strong> Analytics, crash, and advertising data
                 collected by Firebase Analytics, Firebase Crashlytics, and AdMob may be retained by
-                Google according to Google&apos;s own policies and retention practices. We do not
-                directly control those retention periods.
+                Google according to Google&apos;s own policies and retention practices. OpenAI&apos;s
+                retention of AI Coach messages is governed by OpenAI&apos;s Privacy Policy. We do
+                not directly control those retention periods.
             </p>
 
             <h2>5. Data Storage and Security</h2>
             <p>
-                Body weight records used by the app are stored locally on your device. We do not
-                maintain a remote database of your body weight or Health Connect data.
+                Body weight records and AI Coach conversation history are stored locally on your
+                device. Account and subscription information is stored on Supabase-hosted
+                infrastructure. We do not maintain a remote database of your body weight or
+                Health Connect data.
             </p>
             <p>
-                Third-party services such as Firebase and AdMob implement their own security
-                measures to protect collected data.
+                Communication between the app and our backend uses HTTPS. Third-party services
+                such as Supabase, Firebase, and AdMob implement their own security measures to
+                protect collected data.
             </p>
 
             <h2>6. Children&apos;s Privacy</h2>
@@ -214,9 +254,11 @@
 
             <h2>7. Your Choices</h2>
             <ul>
+                <li>Sign out of your account at any time from within the app under <strong>Profile &gt; Sign out</strong>.</li>
+                <li>Request deletion of your account data by contacting us at the email below.</li>
                 <li>Decline or revoke Health Connect permissions through your device settings.</li>
                 <li>Disable personalized ads through your device settings, where available.</li>
-                <li>Use the in-app <strong>Delete all local data</strong> option to erase local app data.</li>
+                <li>Use the in-app <strong>Delete all local data</strong> option to erase locally stored data.</li>
                 <li>Stop using the app to prevent further collection of analytics, crash, or advertising-related data.</li>
                 <li>Uninstall the app at any time.</li>
             </ul>
@@ -229,7 +271,8 @@
 
             <h2>9. Contact Us</h2>
             <p>
-                If you have any questions about this Privacy Policy, you may contact us at:
+                If you have any questions about this Privacy Policy or would like to request
+                deletion of your account data, you may contact us at:
             </p>
             <p>
                 Email:
